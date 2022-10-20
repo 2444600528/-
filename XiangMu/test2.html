@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/test2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="pan">
+
+        <div id="dan"><img class="BaBa" src="img/90088ef93cd43b6ef15e4176a188d4a5.jpg" alt=""></div>
+        <div id="box" ><img class="GuoSang" src="img/微信图片_20221020161220.jpg" alt="" ></div>
+        
+    </div>
+    
+
+    <script>
+//蛇移动函数
+        function keyboard() {
+          
+            document.onkeydown = function() {
+              let keycode = event.keyCode;
+              
+              if (keycode == 37) {
+                box.style.left = box.offsetLeft - 5  + "px";
+                
+                }
+              if(keycode==39){
+                box.style.left = box.offsetLeft + 5 +"px";
+               
+                }
+              if(keycode==38){
+                box.style.top = box.offsetTop -5 +"px";
+                
+                }
+              if(keycode==40){
+                box.style.top = box.offsetTop +5 +"px";
+            
+                }
+                if(keycode==32){
+
+                    box.style.width=250+"px";
+                    //document.getElementById("box").style.width="250px";
+                    var pan = document.getElementById("pan");
+                    var dandan =document.getElementById("dan");
+                    pan.removeChild(dandan);
+                    }
+            }
+         
+          }
+          keyboard();
+/*//蛇长大函数
+        function big(){
+            if(cont==10){
+               document.getElementById("box").style.backgroundColor="blue";
+            }
+        }
+        keyboard();
+        big();
+  
+  */     
+    </script>
+    
+</body>
+</html> 
